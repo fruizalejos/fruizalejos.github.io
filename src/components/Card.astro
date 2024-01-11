@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  src: string;
+}
+
+const { src, title, body } = Astro.props;
+---
+
+<div
+  class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+>
+  <a href="#">
+    <img class="rounded-t-lg object-cover object-top h-44 w-96 top-0" src={src} alt="" />
+  </a>
+  <div class="p-5">
+    <a href="#">
+      <h5
+        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+      >
+        {title}
+      </h5>
+    </a>
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+     	{body}
+    </p>
+    
+    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-indigo-400 border border-indigo-400">Drupal</span>
+  </div>
+</div>

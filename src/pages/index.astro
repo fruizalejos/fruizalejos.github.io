@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
+import Experience from "../components/Experience.astro";
+import Card from "../components/Card.astro";
+import Profile from "../components/Profile.astro";
+import Container from "../components/Container.astro";
+import Tecnologies from "../components/Tecnologies.astro";
+---
+
+<Layout title="Portafolio de Francisco Ruiz-Alejos.">
+  <main>
+    <Container>
+      <About />
+    </Container>
+    <Container>
+      <Profile />
+    </Container>
+    <Container>
+      <h2
+        id="experiencia"
+        class="text-4xl font-extrabold dark:text-white text-gray-200 mb-4"
+      >
+        Experiencia
+      </h2>
+      <Experience />
+    </Container>
+    <Container>
+      <h2
+        id="skills"
+        class="text-4xl font-extrabold dark:text-white text-gray-200 mb-4"
+      >
+        Skills
+      </h2>
+      <Tecnologies />
+    </Container>
+    <Container>
+      <h2
+        id="proyectos"
+        class="text-4xl font-extrabold dark:text-white text-gray-200 mb-4"
+      >
+        Proyectos
+      </h2>
+      <ul role="list" class="grid lg:grid-cols-2 gap-4 justify-center">
+        <Card
+          src="/portal-pacha.png"
+          title="Pacha"
+          body="Desde 1973, la discoteca Pacha Ibiza es un icono cultural y de la música electrónica de Ibiza, donde las cerezas y la isla de la libertad van de la mano."
+        />
+        <Card
+          src="/lioibiza.png"
+          title="Lio"
+          body="Champán, cócteles y comida internacional en un club exclusivo junto al puerto con espectáculos de cabaré y sesiones de DJ en directo."
+        />
+        <Card
+          src="/desibiza.png"
+          title="Destino Ibiza"
+          body="Reserva tus vacaciones en el Resort Destino Pacha Ibiza y disfruta de las espléndidas vistas desde la cima de Cap Martinet | Entrada Gratis a Pacha."
+        />
+        <Card
+          src="/casapacha.png"
+          title="Casa Pacha"
+          body="Siente la calidez en tu piel mientras disfrutas del encanto que rodea este lugar. Un rincón que te hará sentir como en casa. El espíritu Casa Pacha."
+        />
+      </ul>
+    </Container>
+  </main>
+</Layout>
